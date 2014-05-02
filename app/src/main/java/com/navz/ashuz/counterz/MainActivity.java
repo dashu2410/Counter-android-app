@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.startapp.android.publish.StartAppAd;
+
 
 public class MainActivity extends Activity  {
 
@@ -75,6 +77,7 @@ public class MainActivity extends Activity  {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
 
+            StartAppAd.init(getActivity(), "101242287", "205300058");
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             hundredsDigit = (TextView) rootView.findViewById(R.id.hundredsTV);
             counterDigit = (Button) rootView.findViewById(R.id.counterTV);
